@@ -1,2 +1,2 @@
 # Weather-App
-A weather website using html css and js
+A Simple weather app using html css and js
