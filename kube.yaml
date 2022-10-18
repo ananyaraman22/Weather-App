@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: kube
-        image: docker.io/ananyaraman/weathernew_image
+        image: docker.io/ananyaraman/weather_image
         ports:
         - containerPort: 80
 ---
