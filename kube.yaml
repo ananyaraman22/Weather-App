@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: kube
+  labels:
+    app: kube
+spec:
+  selector:
+    matchLabels:
+      app: kube
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: kube
+    spec:
+      containers:
+      - name: kube
+        image: docker.io/ananyaraman/weathernew_image
+        ports:
+        - containerPort: 80
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: kube
+spec:
+  selector:
+    app: kube
+  ports:
+  - port: 80
